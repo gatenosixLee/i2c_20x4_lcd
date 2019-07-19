@@ -59,9 +59,9 @@ class lcd:
   Class to control the 16x2 I2C LCD display from sainsmart from the Raspberry Pi
   """
 
-  def __init__(self):
+  def __init__(self, bus=BUS):
     """Setup the display, turn on backlight and text display + ...?"""
-    self.device = i2c_lib.i2c_device(ADDRESS, BUS)
+    self.device = i2c_lib.i2c_device(ADDRESS, bus)
 
     self.write(0x03)
     self.write(0x03)

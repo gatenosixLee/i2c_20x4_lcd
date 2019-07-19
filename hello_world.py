@@ -2,10 +2,15 @@ import lcddriver as lcd
 from time import time
 from time import sleep
 from datetime import datetime
+import sys
 
-lcd = lcd.lcd()
+bus = 2
 
-#lcd.display_string("11111111111111111111222222222222222222223333333333333333333344444444444444444444", 1)
+argv = sys.argv
+if len(argv) > 1:
+    bus = int(argv[1])
+lcd = lcd.lcd(bus)
+
 lcd.display_string("20x4 LCD Example", 1)
 lcd.display_string("Hello ODROID", 2)
 
