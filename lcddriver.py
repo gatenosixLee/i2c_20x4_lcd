@@ -2,8 +2,8 @@ import i2c_lib
 from time import sleep
 
 # LCD Address
-#ADDRESS = 0x3F
-ADDRESS = 0x27
+ADDRESS = 0x3F
+# ADDRESS = 0x27
 
 # I2C bus
 BUS = 2
